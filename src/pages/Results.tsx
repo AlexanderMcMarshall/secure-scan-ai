@@ -136,7 +136,7 @@ const Results = () => {
           <Button onClick={() => navigate("/")} variant="outline">
             New Scan
           </Button>
-          <Button onClick={() => alert("PDF generation simulated! In production, this would download a PDF report.")}>
+          <Button onClick={() => generatePDF(scan)}>
             <Download className="h-4 w-4 mr-2" />
             Download PDF Report
           </Button>
