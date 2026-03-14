@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, ArrowLeft, Download, AlertTriangle, AlertCircle, Info, ChevronDown, ChevronUp } from "lucide-react";
+import { Shield, ArrowLeft, Download, ChevronDown, ChevronUp } from "lucide-react";
+import { generatePDF } from "@/lib/pdf";
 import { Button } from "@/components/ui/button";
 import { getScanById } from "@/lib/storage";
 import { ScanRequest, Severity, Finding } from "@/lib/types";
@@ -135,7 +136,7 @@ const Results = () => {
           <Button onClick={() => navigate("/")} variant="outline">
             New Scan
           </Button>
-          <Button onClick={() => alert("PDF generation simulated! In production, this would download a PDF report.")}>
+          <Button onClick={() => generatePDF(scan)}>
             <Download className="h-4 w-4 mr-2" />
             Download PDF Report
           </Button>
