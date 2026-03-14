@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, ArrowLeft, Download, AlertTriangle, AlertCircle, Info, ChevronDown, ChevronUp } from "lucide-react";
+import { Shield, ArrowLeft, Download, ChevronDown, ChevronUp } from "lucide-react";
+import { generatePDF } from "@/lib/pdf";
 import { Button } from "@/components/ui/button";
 import { getScanById } from "@/lib/storage";
 import { ScanRequest, Severity, Finding } from "@/lib/types";
