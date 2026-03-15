@@ -16,7 +16,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/secure-scan-ai">
+       <BrowserRouter basename="/secure-scan-ai">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/scan/:id" element={<ScanProgress />} />
