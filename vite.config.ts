@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  basename: "/secure-scan-ai/",
+  base: "/secure-scan-ai/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
